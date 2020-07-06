@@ -7,6 +7,7 @@
   "license": "MIT",
   "description": "mi seckill spider",
   "scripts": {
+    "start": "npx nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -16,10 +17,14 @@
     "koa-router": "^9.1.0"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.18",
+    "@types/koa": "^2.11.3",
+    "@types/koa-router": "^7.4.1",
     "@typescript-eslint/eslint-plugin": "^3.5.0",
     "@typescript-eslint/parser": "^3.5.0",
     "eslint": "^7.4.0",
     "eslint-config-alloy": "^3.7.3",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
