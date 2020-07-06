@@ -1,0 +1,27 @@
+{
+  "name": "mi-seckill-spider",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "mi seckill spider",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "koa": "^2.13.0",
+    "koa-router": "^9.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.4.0",
+    "eslint-config-alloy": "^3.7.3",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  }
+}
