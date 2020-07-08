@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
+    "dayjs": "^1.8.29",
     "koa": "^2.13.0",
     "koa-router": "^9.1.0"
   },
