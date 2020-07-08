@@ -8,6 +8,7 @@
   "description": "mi seckill spider",
   "scripts": {
     "start": "npx nodemon index.ts",
+    "deploy:miseckill": "cd functions/miseckill/ && npm run build && cd - && cloudbase functions:code:update miseckill",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
