@@ -6,6 +6,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const { page } = req.query
 
-  const list = await getListByPage(Number(page) || 1)
-  res.send({ data: list })
+  if (isNaN(Number(page)) || Number(page) < 1) {
+    res.send({ msg: "invalid param 'page'" })
+  } else {
+    const list = await getListByPage(Number(page) || 1)
+    res.send({ data: list })
+  }
 }
