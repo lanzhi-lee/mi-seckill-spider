@@ -1,10 +1,13 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  color: #333;
-  font-size: 50px;
-`
-
 export default function Home() {
-  return <Title>Developing......</Title>
+  return (
+    <section className='app'>
+      <header className='header'>header</header>
+      <section className='body'>
+        <section className='toolbar'>toolbar</section>
+        <aside>aside</aside>
+        <main>main</main>
+      </section>
+      <footer>footer</footer>
+    </section>
+  )
 }
