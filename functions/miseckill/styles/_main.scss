@@ -4,6 +4,7 @@
   @include flex();
   flex-direction: column;
   justify-content: flex-start;
+  background-color: #f5f5f5;
 
   &-wrapper {
     @include flex();
@@ -13,11 +14,127 @@
 }
 
 .main {
-  @include flex();
+  display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   box-sizing: border-box;
-  padding: $MARGIN-WIDTH;
   width: 100%;
-  height: 2000px;
-  background-color: #f5f5f5;
+
+  flex-wrap: wrap;
+}
+
+@mixin card-size() {
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  @include flex();
+  margin-bottom: $MARGIN-WIDTH;
+  background-color: #fff;
+  transition: all 0.2s linear;
+
+  &:nth-child(2n + 1) {
+    margin-right: $MARGIN-WIDTH;
+  }
+
+  &:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0, -2px, 0);
+  }
+
+  .card__img {
+    @include card-size();
+
+    img {
+      @include card-size();
+
+      border: none;
+    }
+  }
+
+  .card__info {
+    @include card-size();
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: $MARGIN-WIDTH;
+
+    &-title {
+      width: 100%;
+      height: 16px;
+      line-height: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-desc {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+
+      width: 100%;
+      height: 32px;
+      line-height: 16px;
+      margin-top: 7px;
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 12px;
+    }
+
+    &-btn {
+      @include flex();
+      width: 100px;
+      height: 30px;
+      border-radius: 2px;
+      margin-top: 14px;
+
+      background: #83c44e;
+      border-color: #83c44e;
+      color: #fff;
+
+      font-size: 14px;
+      z-index: 5;
+    }
+  }
+
+  .card__info-price {
+    width: 100%;
+    line-height: 1;
+    margin-top: 19px;
+    font-size: 16px;
+
+    &-now {
+      color: #f1393a;
+    }
+
+    &-origin {
+      margin-left: 10px;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+
+  .card__info-discount {
+    @include flex();
+    justify-content: space-between;
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    margin-top: 17px;
+
+    &-percent span,
+    &-money span {
+      color: #f00;
+      font-size: 16px;
+    }
+  }
 }

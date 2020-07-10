@@ -25,7 +25,6 @@
 }
 
 // 主要容器的宽度
-
 @media (max-width: $MAIN-MIN-WIDTH + 2*$MARGIN-WIDTH) {
   .main {
     width: $MAIN-MIN-WIDTH;
@@ -38,6 +37,7 @@
   }
 }
 
+// M端两列
 @media (min-width: $MAIN-MIN-WIDTH + 2*$MARGIN-WIDTH) {
   .main {
     width: 100%;
@@ -50,6 +50,7 @@
   }
 }
 
+// 两列 没有aside
 @media (min-width: $MAIN-MEDIUM-WIDTH + 2*$MARGIN-WIDTH) {
   .main {
     width: $MAIN-MEDIUM-WIDTH;
@@ -62,6 +63,7 @@
   }
 }
 
+// 两列
 @media (min-width: $MAIN-MEDIUM-WIDTH + $ASIDE-WIDTH + 3*$MARGIN-WIDTH) {
   .main {
     width: $MAIN-MEDIUM-WIDTH;
@@ -75,6 +77,7 @@
   }
 }
 
+// 三列
 @media (min-width: $MAIN-MAX-WIDTH + $ASIDE-WIDTH + 3*$MARGIN-WIDTH) {
   .main {
     width: $MAIN-MAX-WIDTH;
@@ -85,5 +88,14 @@
   }
   .toolbar {
     width: $MAIN-MAX-WIDTH + $ASIDE-WIDTH + $MARGIN-WIDTH;
+  }
+  .card:nth-child(2n + 1) {
+    margin-right: $MARGIN-WIDTH;
+  }
+  .card:nth-child(2n + 2) {
+    margin-right: $MARGIN-WIDTH;
+  }
+  .card:nth-child(3n + 3) {
+    margin-right: 0;
   }
 }
