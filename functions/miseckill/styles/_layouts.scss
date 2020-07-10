@@ -1,0 +1,25 @@
+@import './common';
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .header {
+    padding-top: 20px;
+  }
+  .search-form-input {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

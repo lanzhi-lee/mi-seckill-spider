@@ -1,0 +1,96 @@
+@import './common';
+
+.header {
+  @include flex();
+  flex-direction: column;
+
+  width: 100%;
+  color: #fff;
+  background-color: #ee712e;
+
+  &__nav {
+    width: 1140px;
+
+    & a {
+      display: inline-block;
+      color: #eee;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    & a:hover {
+      color: #fff;
+    }
+  }
+
+  &__container {
+    @include flex();
+    flex-direction: column;
+    color: #fff;
+  }
+
+  &-title {
+    @include flex();
+    flex-direction: column;
+
+    & h1,
+    & div {
+      text-align: center;
+    }
+
+    & h1 {
+      font-size: 56px;
+      text-shadow: -5px 5px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+    }
+  }
+
+  & .search {
+    &-wraper {
+      width: 100%;
+
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 680px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    &-form-group {
+      // todo 样式待定
+      font-weight: normal;
+    }
+
+    &-form-input {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      padding: 6px 12px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+      border-color: transparent;
+      outline: 0;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+      &::-ms-input-placeholder {
+        text-align: center;
+      }
+      &::-webkit-input-placeholder {
+        text-align: center;
+      }
+    }
+
+    &-form-input:focus {
+      transition: 0.2s;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    }
+  }
+}

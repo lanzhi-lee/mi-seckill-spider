@@ -1,6 +1,10 @@
 output
 config.ts
 
+_common.min.css
+_header.min.css
+_layouts.min.css
+
 _book
 
 # Logs

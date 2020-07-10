@@ -11,6 +11,10 @@ export default class MyDocument extends Document {
         <Head>
           <link href={normalizeCSS} rel='stylesheet' />
           <link href={`.${selfConfig.prefix}/index.min.css`} rel='stylesheet' />
+          {
+            // 未使用css-in-js方案，取巧式的自动更新
+            // process.env.NODE_ENV === 'development' && <meta http-equiv='refresh' content='5'></meta>
+          }
         </Head>
         <body>
           <Main />

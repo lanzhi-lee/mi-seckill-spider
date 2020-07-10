@@ -1,0 +1,7 @@
+$SAFE-WIDTH: 1226px !default;
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
