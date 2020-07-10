@@ -33,6 +33,7 @@
   margin-bottom: $MARGIN-WIDTH;
   background-color: #fff;
   transition: all 0.2s linear;
+  color: #333;
 
   &:nth-child(2n + 1) {
     margin-right: $MARGIN-WIDTH;
@@ -69,7 +70,6 @@
       line-height: 16px;
       font-size: 16px;
       font-weight: bold;
-      color: #333;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

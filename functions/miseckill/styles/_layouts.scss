@@ -27,7 +27,7 @@
 // 主要容器的宽度
 @media (max-width: $MAIN-MIN-WIDTH + 2*$MARGIN-WIDTH) {
   .main {
-    width: $MAIN-MIN-WIDTH;
+    width: 100%;
   }
   .aside {
     display: none;
