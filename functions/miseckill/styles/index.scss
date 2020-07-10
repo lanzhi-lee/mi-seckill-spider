@@ -1,6 +1,7 @@
 @import './common';
-@import './layouts';
 @import './header';
+@import './main';
+@import './layouts';
 
 html,
 body {
@@ -16,19 +17,30 @@ body {
   transition: 0.5s;
 }
 
-.body {
+.toolbar {
   @include flex();
-  flex-direction: column;
-  justify-content: flex-start;
+  height: 70px;
+  margin: $MARGIN-WIDTH auto;
+  background-color: #f5f5f5;
 }
 
-.toolbar {
-}
 .aside {
+  @include flex();
+
+  box-sizing: border-box;
   position: sticky;
-  top: 0;
+  top: $NAV-HEIGHT + $MARGIN-WIDTH;
+
+  height: 200px; // todo 待更新
+  background-color: #f5f5f5;
+  margin-left: $MARGIN-WIDTH;
 }
-.main {
-}
+
 .footer {
+  @include flex();
+  box-sizing: border-box;
+  height: 120px;
+  margin-top: $MARGIN-WIDTH;
+  padding: $MARGIN-WIDTH;
+  background-color: #f5f5f5;
 }

@@ -1,5 +1,14 @@
 $SAFE-WIDTH: 1226px !default;
 
+$NAV-HEIGHT: 40px;
+
+$ASIDE-WIDTH: 300px;
+$MAIN-MAX-WIDTH: 1230px; // 400 * 3 + 15 * 2
+$MAIN-MEDIUM-WIDTH: 815px; // 400 * 2 + 15
+$MAIN-MIN-WIDTH: 415px; // 200 * 2 + 15
+
+$MARGIN-WIDTH: 15px;
+
 @mixin flex() {
   display: flex;
   align-items: center;

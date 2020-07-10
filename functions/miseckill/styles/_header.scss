@@ -9,7 +9,12 @@
   background-color: #ee712e;
 
   &__nav {
-    width: 1140px;
+    display: flex;
+    align-items: center;
+    height: $NAV-HEIGHT;
+
+    // position: fixed;
+    // top: 20px;
 
     & a {
       display: inline-block;

@@ -23,3 +23,67 @@
     width: 1170px;
   }
 }
+
+// 主要容器的宽度
+
+@media (max-width: $MAIN-MIN-WIDTH + 2*$MARGIN-WIDTH) {
+  .main {
+    width: $MAIN-MIN-WIDTH;
+  }
+  .aside {
+    display: none;
+  }
+  .toolbar {
+    width: 100%;
+  }
+}
+
+@media (min-width: $MAIN-MIN-WIDTH + 2*$MARGIN-WIDTH) {
+  .main {
+    width: 100%;
+  }
+  .aside {
+    display: none;
+  }
+  .toolbar {
+    width: 100%;
+  }
+}
+
+@media (min-width: $MAIN-MEDIUM-WIDTH + 2*$MARGIN-WIDTH) {
+  .main {
+    width: $MAIN-MEDIUM-WIDTH;
+  }
+  .aside {
+    display: none;
+  }
+  .toolbar {
+    width: $MAIN-MEDIUM-WIDTH;
+  }
+}
+
+@media (min-width: $MAIN-MEDIUM-WIDTH + $ASIDE-WIDTH + 3*$MARGIN-WIDTH) {
+  .main {
+    width: $MAIN-MEDIUM-WIDTH;
+  }
+  .aside {
+    display: block;
+    width: $ASIDE-WIDTH;
+  }
+  .toolbar {
+    width: $MAIN-MEDIUM-WIDTH + $ASIDE-WIDTH + $MARGIN-WIDTH;
+  }
+}
+
+@media (min-width: $MAIN-MAX-WIDTH + $ASIDE-WIDTH + 3*$MARGIN-WIDTH) {
+  .main {
+    width: $MAIN-MAX-WIDTH;
+  }
+  .aside {
+    display: block;
+    width: $ASIDE-WIDTH;
+  }
+  .toolbar {
+    width: $MAIN-MAX-WIDTH + $ASIDE-WIDTH + $MARGIN-WIDTH;
+  }
+}

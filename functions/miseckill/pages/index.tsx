@@ -33,8 +33,10 @@ export default function Home() {
 
       <section className='container body'>
         <section className='toolbar'>toolbar</section>
-        <aside className='aside'>aside</aside>
-        <main className='main'>main</main>
+        <section className='body-wrapper'>
+          <main className='main'>main</main>
+          <aside className='aside'>aside</aside>
+        </section>
       </section>
       <footer className='footer'>footer</footer>
     </section>

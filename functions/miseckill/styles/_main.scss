@@ -1,0 +1,23 @@
+@import './common';
+
+.body {
+  @include flex();
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &-wrapper {
+    @include flex();
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.main {
+  @include flex();
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: $MARGIN-WIDTH;
+  width: 100%;
+  height: 2000px;
+  background-color: #f5f5f5;
+}
