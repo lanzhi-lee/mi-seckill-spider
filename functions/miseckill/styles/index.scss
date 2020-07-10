@@ -25,11 +25,11 @@ body {
 }
 
 .aside {
-  @include flex();
-
   box-sizing: border-box;
   position: sticky;
   top: $NAV-HEIGHT + $MARGIN-WIDTH;
+  align-items: center;
+  justify-content: center;
 
   height: 200px; // todo 待更新
   background-color: #f5f5f5;

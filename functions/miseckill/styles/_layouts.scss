@@ -67,7 +67,7 @@
     width: $MAIN-MEDIUM-WIDTH;
   }
   .aside {
-    display: block;
+    display: flex;
     width: $ASIDE-WIDTH;
   }
   .toolbar {
@@ -80,7 +80,7 @@
     width: $MAIN-MAX-WIDTH;
   }
   .aside {
-    display: block;
+    display: flex;
     width: $ASIDE-WIDTH;
   }
   .toolbar {
