@@ -10,7 +10,7 @@ interface GoodsCardInterface {
 }
 
 export const GoodsCard: React.FC<GoodsCardInterface> = (props) => {
-  const { imgUrl, title, desc, nowPrice, originPrice, discountPercent, discountMoney } = props
+  const { id, imgUrl, title, desc, nowPrice, originPrice, discountPercent, discountMoney } = props
 
   return (
     <section className='card'>
@@ -32,7 +32,13 @@ export const GoodsCard: React.FC<GoodsCardInterface> = (props) => {
             共优惠 <span>{discountMoney}</span> 元
           </span>
         </span>
-        <span className='card__info-btn'>详情</span>
+        <a
+          href={`https://www.mi.com/buy/detail?product_id=${id}`}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <span className='card__info-btn'>详情</span>
+        </a>
       </div>
     </section>
   )

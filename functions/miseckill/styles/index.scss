@@ -1,11 +1,15 @@
-@import './common';
-@import './header';
-@import './main';
-@import './layouts';
-
+@import './_common.scss';
+@import './_header.scss';
+@import './_main.scss';
+@import './_layouts.scss';
+// 详细信息
 html,
 body {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
