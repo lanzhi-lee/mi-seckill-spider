@@ -8,7 +8,7 @@
   "description": "mi seckill spider",
   "scripts": {
     "start": "npx nodemon index.ts",
-    "deploy:miseckill": "cd functions/miseckill/ && npm run build && cd - && cloudbase functions:code:update miseckill",
+    "deploy:miseckill": "cd functions/miseckill/ && npm run build && cd - && npx cloudbase functions:code:update miseckill",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "koa-router": "^9.1.0"
   },
   "devDependencies": {
+    "@cloudbase/cli": "latest",
     "@types/cheerio": "^0.22.18",
     "@types/koa": "^2.11.3",
     "@types/koa-router": "^7.4.1",
