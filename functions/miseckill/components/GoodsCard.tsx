@@ -14,9 +14,8 @@ export const GoodsCard: React.FC<GoodsCardInterface> = (props) => {
 
   return (
     <section className='card'>
-      <div className='card__img'>
-        <img src={imgUrl} alt='title' />
-      </div>
+      <img className='card__img' src={imgUrl} alt='title' />
+
       <div className='card__info'>
         <span className='card__info-title'>{title}</span>
         <span className='card__info-desc'>{desc}</span>
@@ -33,11 +32,12 @@ export const GoodsCard: React.FC<GoodsCardInterface> = (props) => {
           </span>
         </span>
         <a
+          className='card__info-detail'
           href={`https://www.mi.com/buy/detail?product_id=${id}`}
           target='_blank'
           rel='noopener noreferrer'
         >
-          <span className='card__info-btn'>详情</span>
+          <span className='card__info-detail-btn'>详情</span>
         </a>
       </div>
     </section>

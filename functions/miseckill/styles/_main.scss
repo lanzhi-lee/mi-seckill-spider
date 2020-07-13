@@ -23,11 +23,6 @@
   flex-wrap: wrap;
 }
 
-@mixin card-size() {
-  width: 200px;
-  height: 200px;
-}
-
 .card {
   @include flex();
   margin-bottom: $MARGIN-WIDTH;
@@ -45,17 +40,11 @@
   }
 
   .card__img {
-    @include card-size();
-
-    img {
-      @include card-size();
-
-      border: none;
-    }
+    display: block;
+    border: none;
   }
 
   .card__info {
-    @include card-size();
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -87,21 +76,6 @@
       margin-top: 7px;
       color: rgba(0, 0, 0, 0.54);
       font-size: 12px;
-    }
-
-    &-btn {
-      @include flex();
-      width: 100px;
-      height: 30px;
-      border-radius: 2px;
-      margin-top: 14px;
-
-      background: #83c44e;
-      border-color: #83c44e;
-      color: #fff;
-
-      font-size: 14px;
-      z-index: 5;
     }
   }
 
@@ -135,6 +109,26 @@
     &-money span {
       color: #f00;
       font-size: 16px;
+    }
+  }
+
+  .card__info-detail {
+    display: flex;
+    width: 100%;
+
+    &-btn {
+      @include flex();
+      width: 100px;
+      height: 30px;
+      border-radius: 2px;
+      margin-top: 14px;
+
+      background: #83c44e;
+      border-color: #83c44e;
+      color: #fff;
+
+      font-size: 14px;
+      z-index: 5;
     }
   }
 }

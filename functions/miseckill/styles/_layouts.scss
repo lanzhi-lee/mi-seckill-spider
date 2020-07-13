@@ -99,3 +99,48 @@
     margin-right: 0;
   }
 }
+
+// card的宽度
+// PC端
+@media (min-width: $MAIN-MEDIUM-WIDTH + 2*$MARGIN-WIDTH) {
+  .card {
+    width: 400px;
+    height: 200px;
+  }
+  .card__img {
+    width: 50%;
+  }
+  .card__info {
+    width: 50%;
+    height: 100%;
+  }
+  .card__info-detail {
+    justify-content: flex-start;
+  }
+}
+
+// M端
+@media (max-width: $MAIN-MEDIUM-WIDTH + 2*$MARGIN-WIDTH) {
+  .main {
+    justify-content: center;
+  }
+  .card {
+    flex-direction: column;
+    width: calc((100% - 15px) / 2);
+    max-width: 300px;
+  }
+  .card__img {
+    width: 100%;
+  }
+  .card__info {
+    width: 100%;
+    height: 200px;
+  }
+  .card__info-detail {
+    justify-content: center;
+    &-btn {
+      width: 70%;
+      min-width: 120px;
+    }
+  }
+}
