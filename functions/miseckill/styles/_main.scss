@@ -34,9 +34,12 @@
     margin-right: $MARGIN-WIDTH;
   }
 
-  &:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transform: translate3d(0, -2px, 0);
+  // PC端增加hover效果
+  @media (min-width: $MAIN-MEDIUM-WIDTH + 2*$MARGIN-WIDTH) {
+    &:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transform: translate3d(0, -2px, 0);
+    }
   }
 
   .card__img {
@@ -56,7 +59,7 @@
     &-title {
       width: 100%;
       height: 16px;
-      line-height: 16px;
+      // line-height: 16px;
       font-size: 16px;
       font-weight: bold;
       overflow: hidden;
@@ -128,7 +131,6 @@
       color: #fff;
 
       font-size: 14px;
-      z-index: 5;
     }
   }
 }
