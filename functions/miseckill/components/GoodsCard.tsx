@@ -7,10 +7,16 @@ interface GoodsCardInterface {
   originPrice: string
   discountPercent: number
   discountMoney: string
+  startTime: string
 }
 
 export const GoodsCard: React.FC<GoodsCardInterface> = (props) => {
   const { id, imgUrl, title, desc, nowPrice, originPrice, discountPercent, discountMoney } = props
+
+  // const isMobile = window && window.innerWidth <= 845
+  // const pcLink = `https://www.mi.com/buy/detail?product_id=${id}`
+  // const mobileLink = `https://m.mi.com/commodity/detail/${id}`
+  // console.log(window.innerWidth <= 845, '-------')
 
   return (
     <section className='card'>
@@ -33,6 +39,7 @@ export const GoodsCard: React.FC<GoodsCardInterface> = (props) => {
         </span>
         <a
           className='card__info-detail'
+          // href={isMobile ? mobileLink : pcLink}
           href={`https://www.mi.com/buy/detail?product_id=${id}`}
           target='_blank'
           rel='noopener noreferrer'

@@ -1,5 +1,4 @@
 import axios from 'axios'
-import * as dayjs from 'dayjs'
 
 /**
  * 指具体商品的元素
@@ -48,10 +47,11 @@ interface GoodsItem {
  */
 interface ListItem {
   list: GoodsItem[]
-  start_time: string
+  start_time: number
+  // start_time: string
 }
 
-interface AllList {
+export interface AllList {
   [key: string]: GoodsItem[]
 }
 
@@ -99,7 +99,8 @@ export function getListByPage(page: number) {
 
           pre.push({
             list,
-            start_time: dayjs.unix(cur.start_time).format('YYYY-MM-DD HH:mm:ss'),
+            start_time: cur.start_time,
+            // start_time: dayjs.unix(cur.start_time).format('YYYY-MM-DD HH:mm:ss'),
           })
           return pre
         }, [] as ListItem[])
