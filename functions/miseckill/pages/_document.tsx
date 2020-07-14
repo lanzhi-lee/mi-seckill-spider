@@ -9,7 +9,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Mi SecKill Plus</title>
           <meta name='description' content='小米秒杀加强版' />
 
           <link rel='icon' href='./favicon.ico' />

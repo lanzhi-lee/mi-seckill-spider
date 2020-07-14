@@ -14,7 +14,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const top5 = top5Keys.reduce((pre: AllList, cur) => {
     const key = dayjs.unix(cur).format('YYYY-MM-DD HH:mm:ss')
-    pre[key] = list[cur]
+    // 此处有一个奇怪的问题
+    // 如果不适用断言，next在打包时无法取到list的类型，导致打包失败
+    pre[key] = (list as AllList)[cur]
 
     return pre
   }, {})
